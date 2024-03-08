@@ -36,8 +36,8 @@ RUN yum install \
 COPY php.ini /etc/php.ini
 
 # Download processmaker-3.5.4-community
-RUN wget -O "/tmp/processmaker-3.5.4-community.tar.gz" \
-      "https://tenet.dl.sourceforge.net/project/processmaker/ProcessMaker/3.5.4/processmaker-3.5.4-community.tar.gz"
+wget -O "/tmp/processmaker-3.5.4-community.zip" \
+      "https://github.com/tomolimo/processmaker-community/releases/download/3.5.7-community/processmaker-community-3.5.7.zip"
 # Copy configuration files
 COPY pmos.conf /etc/httpd/conf.d
 RUN mv /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf.bk
